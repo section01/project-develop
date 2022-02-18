@@ -1,11 +1,12 @@
-package jp.co.web.infrastructure;
+package jp.co.web.infrastructure.mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import jp.co.web.application.WorkForm;
+import jp.co.web.application.resource.WorkForm;
+import jp.co.web.infrastructure.model.DetailModel;
 
 /**
  * 勤怠詳細リポジトリ

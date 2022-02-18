@@ -1,7 +1,9 @@
-package jp.co.web.infrastructure;
+package jp.co.web.infrastructure.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import jp.co.web.infrastructure.model.UserModel;
 
 /**
  * ユーザリポジトリ

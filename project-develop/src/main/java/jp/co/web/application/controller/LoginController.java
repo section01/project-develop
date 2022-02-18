@@ -1,4 +1,4 @@
-package jp.co.web.application;
+package jp.co.web.application.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import jp.co.web.domain.LoginService;
+import jp.co.web.application.resource.LoginForm;
+import jp.co.web.domain.service.LoginService;
 
 /**
  * ログイン画面コントローラ

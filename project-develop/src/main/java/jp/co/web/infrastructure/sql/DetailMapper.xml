@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace = "jp.co.web.infrastructure.DetailMapper">
+<mapper namespace = "jp.co.web.infrastructure.mapper.DetailMapper">
 
-    <resultMap id="result" type="jp.co.web.infrastructure.DetailModel">
+    <resultMap id="result" type="jp.co.web.infrastructure.model.DetailModel">
         <result property="date"      column="date" />
         <result property="week"      column="week" />
         <result property="type"      column="type" />

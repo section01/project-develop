@@ -1,4 +1,4 @@
-package jp.co.web.application;
+package jp.co.web.application.resource;
 
 import java.io.Serializable;
 

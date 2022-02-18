@@ -1,9 +1,11 @@
-package jp.co.web.infrastructure;
+package jp.co.web.infrastructure.mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import jp.co.web.infrastructure.model.PeriodModel;
 
 /**
  * 勤怠期間リポジトリ

@@ -1,4 +1,4 @@
-package jp.co.web.infrastructure;
+package jp.co.web.infrastructure.model;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package jp.co.web.application;
+package jp.co.web.application.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import jp.co.web.domain.WorkService;
+import jp.co.web.application.resource.WorkForm;
+import jp.co.web.domain.service.WorkService;
 import jp.co.web.session.UserInformation;
 
 /**

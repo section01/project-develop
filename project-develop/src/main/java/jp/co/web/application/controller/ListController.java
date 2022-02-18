@@ -1,4 +1,4 @@
-package jp.co.web.application;
+package jp.co.web.application.controller;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import jp.co.web.domain.ListService;
+import jp.co.web.application.resource.ListForm;
+import jp.co.web.domain.service.ListService;
 import jp.co.web.session.UserInformation;
 
 /**
