@@ -1,0 +1,118 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>ユーザ管理</title>
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap-reboot.css}" />
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/common.css}" />
+<link rel="stylesheet" th:href="@{/css/list.css}" />
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/common.js}"></script>
+<script th:src="@{/js/user.js}"></script>
+<!--[if lt IE 9]>
+  <script src="html5shiv.js"></script>
+  <script src="respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <header class="fixed-top text-white bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h5>
+            <strong>ユーザ管理画面</strong>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </header>
+  <form th:action="@{/user/event}" th:object="${userForm}" method="post" autocomplete="off">
+    <div class="container-fluid py-3">
+      <div class="row">
+        <div class="col-12">
+          <div class="dropdown">
+            <button id="btnOpenMenu" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ユーザ操作一覧
+            </button>
+            <button type="submit" class="btn btn-sm btn-danger" name="back">戻る</button>
+            <div class="dropdown-menu" aria-labelledby="btnOpenMenu">
+              <button class="dropdown-item" type="button" onclick="registButtonClick()">登録</button>
+              <button class="dropdown-item" type="button" onclick="deleteButtonClick()">削除</button>
+            </div>
+          </div>
+          <div id="registProcess" style="display:none">
+            <div class="col-xs-4">
+                <label for="id">社員ID：
+                  <input id="registId" type="text" class="form-control form-control-sm" placeholder="id" th:field="*{id}" disabled="disabled">
+                </label>
+            </div>
+            <div class="col-xs-4">
+              <label for="name">社員名：
+                <input type="text" class="form-control form-control-sm" placeholder="name" th:field="*{name}">
+              </label>
+            </div>
+            <div class="col-xs-4">
+              <label for="roles">権限：
+                <input type="text" class="form-control form-control-sm" placeholder="roles" th:field="*{roles}">
+              </label>
+            </div>
+            <div class="col-xs-4">
+              <label for="roles">パスワード：
+                <input type="text" class="form-control form-control-sm" placeholder="password" th:field="*{password}">
+              </label>
+            </div>
+            <div class="bnt-group">
+              <button class="btn btn-sm btn-outline-secondary" type="submit" name="regist" >登録</button>
+            </div>
+          </div>
+
+          <div id="deleteProcess" style="display:none">
+            <div class="account">
+              <div class="col-xs-4">
+                <label for="id">社員ID：
+                  <input id="deleteId" type="text" class="form-control form-control-sm" placeholder="id" th:field="*{id}" disabled="disabled">
+                </label>
+              </div>
+            </div>
+            <div class="bnt-group">
+              <button class="btn btn-sm btn-outline-secondary" type="submit" name="delete" >削除</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <footer class="fixed-bottom bg-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12">
+          <label class="text-muted">© 2019 Sample.Ltd</label>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+  function registButtonClick(){
+    document.getElementById('registProcess').style.display = '';
+    document.getElementById('deleteProcess').style.display = 'none';
+    const registId = document.getElementById('registId');
+    const deleteId = document.getElementById('deleteId');
+    registId.disabled = false;
+    deleteId.disabled = true;
+  }
+  function deleteButtonClick(){
+    document.getElementById('registProcess').style.display = 'none';
+    document.getElementById('deleteProcess').style.display = '';
+    const registId = document.getElementById('registId');
+    const deleteId = document.getElementById('deleteId');
+    registId.disabled = true;
+    deleteId.disabled = false;
+  }
+  </script>
+</body>
+</html>
