@@ -43,4 +43,24 @@
         and um.name = #{name}
     </select>
 
+	<!-- 登録 -->
+    <insert id="insertUserInfo">
+        insert into user_mst (
+            id,
+            name
+        )
+        values(
+          #{id},
+          #{name}
+        )
+    </insert>
+
+	<!-- 削除 -->
+    <delete id="deleteUserInfo">
+        delete from
+            user_mst
+        where
+            id     = #{id}
+    </delete>
+
 </mapper>
