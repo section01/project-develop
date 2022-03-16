@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.row {
+    height : 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+.bnt-group{
+    padding: 30px;
+}
+
+.user-group{
+  text-align: left;
+}
+
+.input{
+	width: 200px;
+}
+
+.account{
+	margin-right: 20px;
+}
+
+
