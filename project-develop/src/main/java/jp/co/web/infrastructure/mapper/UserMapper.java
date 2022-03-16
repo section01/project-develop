@@ -25,4 +25,17 @@ public interface UserMapper {
             @Param("id")   String id,
             @Param("name") String name);
 
+    /**
+     * 登録
+     */
+    public void insertUserInfo(
+            @Param("id")   String id,
+            @Param("name") String name);
+
+    /**
+     * 削除
+     */
+    public void deleteUserInfo(
+            @Param("id") String id);
+
 }
